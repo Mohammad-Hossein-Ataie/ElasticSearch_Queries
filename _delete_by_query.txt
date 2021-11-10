@@ -1,0 +1,11 @@
+POST metricbeat-system-monitor/_delete_by_query
+{
+	"query": {
+		"range" : {
+			"timestamp" : {
+				"lt": "now-2d",
+				"format": "MM/dd/yyyy"
+				}
+			}
+	}
+}
